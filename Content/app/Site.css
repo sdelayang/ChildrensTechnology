@@ -1,7 +1,6 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    margin-top: 20px;
+﻿h1 {
+    text-align: center;
+    font-size: 30px;
 }
 
 .container {
