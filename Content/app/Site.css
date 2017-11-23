@@ -23,7 +23,27 @@
 
 .robot {
     position: absolute;
-    width: 300px;
+    padding: 0;    
     height: 200px;
     margin-top: -210px;
+    background-image: url(../images/robot.png);
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-size: contain;
+}
+
+.robot.right {
+    background-image: url(../images/robot_right.png);
+}
+
+.robot.left {
+    background-image: url(../images/robot_left.png);
+}
+
+.robot.back {
+    background-image: url(../images/robot_back.png);
+}
+
+.displayNone {
+    display: none;
 }

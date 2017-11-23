@@ -17,4 +17,28 @@ document.addEventListener('keydown', function (event) {
         // down
         $(".robot").css("margin-top", marginTop + 220 + "px");
     }
+    else if (event.keyCode === 65) {
+        // a
+        $(".robot").removeClass("back");
+        $(".robot").removeClass("right");
+        $(".robot").addClass("left");
+    }
+    else if (event.keyCode === 68) {
+        // d
+        $(".robot").removeClass("left");
+        $(".robot").removeClass("back");
+        $(".robot").addClass("right");
+    }
+    else if (event.keyCode === 87) {
+        // w
+        $(".robot").removeClass("left");
+        $(".robot").removeClass("right");
+        $(".robot").addClass("back");
+    }
+    else if (event.keyCode === 83) {
+        // s
+        $(".robot").removeClass("left");
+        $(".robot").removeClass("right");
+        $(".robot").removeClass("back");
+    }
 });
