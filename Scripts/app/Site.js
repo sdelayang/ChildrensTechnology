@@ -107,8 +107,8 @@ document.addEventListener('keydown', function (event) {
 function animation() {
     // random number between 1 and 4
     var randomNumberSound = Math.floor((Math.random() * 4) + 1);
-    // random number between 1 and 11
-    var randomNumberAnimation = Math.floor((Math.random() * 11) + 1);
+    // random number between 1 and 12
+    var randomNumberAnimation = Math.floor((Math.random() * 12) + 1);
 
     switch(randomNumberSound) {
         case 1:
@@ -132,6 +132,7 @@ function animation() {
             break;
     }
     
+    alert(randomNumberAnimation);
     switch(randomNumberAnimation) {
         case 1:
             $(".animation1").fadeIn();
