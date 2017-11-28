@@ -1,6 +1,14 @@
 ﻿h1 {
     text-align: center;
     font-size: 30px;
+    margin: 0 10px 0 0;
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    text-align: center;
 }
 
 .container {
@@ -21,6 +29,10 @@
     border: 3px solid white;
 }
 
+.content {
+    margin-bottom: 20px;
+}
+
 .robot {
     position: absolute;
     padding: 0;    
@@ -30,6 +42,7 @@
     background-repeat: no-repeat;
     background-position-x: 20%;
     background-size: contain;
+    z-index: 20;
 }
 
 .robot.right {
@@ -42,6 +55,29 @@
 
 .robot.back {
     background-image: url(../images/robot_back.png);
+}
+
+.goal {
+    position: absolute;
+    padding: 0;
+    height: 200px;   
+    background-image: url(../images/gift.png);
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-size: contain;
+    z-index: 10;
+}
+
+.goal.row1 {
+    margin-top: -650px;
+}
+
+.goal.row2 {
+    margin-top: -430px;
+}
+
+.goal.row3 {
+    margin-top: -210px;
 }
 
 .displayNone {

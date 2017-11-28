@@ -1,3 +1,47 @@
+$( document ).ready(function(){
+    var goal = $(".goal");
+    // random number between 1 and 6
+    var randomNumber = Math.floor((Math.random() * 6) + 1);
+    var grassWidth = $(".grassTile").width();
+    var left = parseInt($(".goal").css("left"));
+
+    switch(randomNumber) {
+        case 1:
+            $(".goal").addClass("row1");
+            break;
+
+        case 2:
+            $(".goal").addClass("row1");
+            $(".goal").css("left", left + grassWidth + "px");
+            break;
+
+        case 3:
+            $(".goal").addClass("row1");
+            $(".goal").css("left", left + (grassWidth * 2) + "px");
+            break;
+
+        case 4:
+            $(".goal").addClass("row2");
+            $(".goal").css("left", left + grassWidth + "px");
+            break;
+
+        case 5:
+            $(".goal").addClass("row2");
+            $(".goal").css("left", left + (grassWidth * 2) + "px");
+            break;
+
+        case 6:
+            $(".goal").addClass("row3");
+            $(".goal").css("left", left + (grassWidth * 2) + "px");
+            break;
+        
+        default:
+            $(".goal").addClass("row1");
+            $(".goal").css("left", left + (grassWidth * 2) + "px");
+            break;
+    }
+});
+
 document.addEventListener('keydown', function (event) {
     var grassWidth = $(".grassTile").width();
     var marginTop = parseInt($(".robot").css("margin-top"));
@@ -42,5 +86,9 @@ document.addEventListener('keydown', function (event) {
         $(".robot").removeClass("left");
         $(".robot").removeClass("right");
         $(".robot").removeClass("back");
+    }
+    else if (event.keyCode === 13) {
+        // enter
+        
     }
 });
