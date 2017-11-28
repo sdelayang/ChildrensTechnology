@@ -82,16 +82,11 @@
 
 .gif {
     position: absolute;
-    padding: 0;   
     display: none; 
     height: 90vh;
     width: 140vh;
     margin-top: -90vh;
-    background-image: url(../images/robot_forward.png);
-    background-repeat: no-repeat;
-    background-position-x: 20%;
-    background-size: contain;
-    z-index: 20;
+    z-index: 30;
 }
 
 .displayNone {
