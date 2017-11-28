@@ -132,7 +132,6 @@ function animation() {
             break;
     }
     
-    alert(randomNumberAnimation);
     switch(randomNumberAnimation) {
         case 1:
             $(".animation1").fadeIn();
