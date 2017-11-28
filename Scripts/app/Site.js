@@ -47,6 +47,11 @@ document.addEventListener('keydown', function (event) {
     var marginTop = parseInt($(".robot").css("margin-top"));
     var left = parseInt($(".robot").css("left"));
 
+    if (event.keyCode != 13)
+    {
+        $(".step").trigger("play");
+    }
+
     if (event.keyCode === 37) {
         // left
         $(".robot").css("left", left - grassWidth + "px");
@@ -65,30 +70,41 @@ document.addEventListener('keydown', function (event) {
     }
     else if (event.keyCode === 65) {
         // a
-        $(".robot").removeClass("back");
+        $(".robot").removeClass("forward");
         $(".robot").removeClass("right");
         $(".robot").addClass("left");
     }
     else if (event.keyCode === 68) {
         // d
         $(".robot").removeClass("left");
-        $(".robot").removeClass("back");
+        $(".robot").removeClass("forward");
         $(".robot").addClass("right");
     }
     else if (event.keyCode === 87) {
         // w
         $(".robot").removeClass("left");
         $(".robot").removeClass("right");
-        $(".robot").addClass("back");
+        $(".robot").removeClass("forward");
     }
     else if (event.keyCode === 83) {
         // s
         $(".robot").removeClass("left");
         $(".robot").removeClass("right");
-        $(".robot").removeClass("back");
+        $(".robot").addClass("forward");
     }
     else if (event.keyCode === 13) {
         // enter
-        
+        $(".background").trigger("pause");
+        $(".reachGoal").trigger("play");
+
+        setTimeout(function(){
+            $(".reachGoal").trigger("pause");
+            animation();
+        }, 10000);
     }
 });
+
+function animation() {
+    $(".gif").fadeIn();
+    $(".reachGoal").trigger("play");
+}

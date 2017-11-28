@@ -38,7 +38,7 @@
     padding: 0;    
     height: 200px;
     margin-top: -210px;
-    background-image: url(../images/robot_forward.png);
+    background-image: url(../images/robot_back.png);
     background-repeat: no-repeat;
     background-position-x: 20%;
     background-size: contain;
@@ -53,8 +53,8 @@
     background-image: url(../images/robot_left.png);
 }
 
-.robot.back {
-    background-image: url(../images/robot_back.png);
+.robot.forward {
+    background-image: url(../images/robot_forward.png);
 }
 
 .goal {
@@ -78,6 +78,19 @@
 
 .goal.row3 {
     margin-top: -210px;
+}
+
+.gif {
+    position: absolute;
+    padding: 0;   
+    display: none; 
+    height: 200px;
+    margin-top: -210px;
+    background-image: url(../images/robot_forward.png);
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-size: contain;
+    z-index: 20;
 }
 
 .displayNone {
