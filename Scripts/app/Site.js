@@ -176,6 +176,10 @@ function animation() {
         case 11:
             $(".animation11").fadeIn();
             break;
+
+        case 12:
+            $(".animation12").fadeIn();
+            break;
         
         default:
             $(".animation1").fadeIn();
