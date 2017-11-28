@@ -100,11 +100,85 @@ document.addEventListener('keydown', function (event) {
         setTimeout(function(){
             $(".reachGoal").trigger("pause");
             animation();
-        }, 10000);
+        }, 2500);
     }
 });
 
 function animation() {
-    $(".gif").fadeIn();
-    $(".reachGoal").trigger("play");
+    // random number between 1 and 4
+    var randomNumberSound = Math.floor((Math.random() * 4) + 1);
+    // random number between 1 and 11
+    var randomNumberAnimation = Math.floor((Math.random() * 11) + 1);
+
+    switch(randomNumberSound) {
+        case 1:
+            $(".sound1").trigger("play");
+            break;
+
+        case 2:
+            $(".sound2").trigger("play");
+            break;
+
+        case 3:
+            $(".sound3").trigger("play");
+            break;
+
+        case 4:
+            $(".sound4").trigger("play");
+            break;
+        
+        default:
+            $(".sound1").trigger("play");
+            break;
+    }
+    
+    switch(randomNumberAnimation) {
+        case 1:
+            $(".animation1").fadeIn();
+            break;
+
+        case 2:
+            $(".animation2").fadeIn();
+            break;
+
+        case 3:
+            $(".animation3").fadeIn();
+            break;
+
+        case 4:
+            $(".animation4").fadeIn();
+            break;
+        
+        case 5:
+            $(".animation5").fadeIn();
+            break;
+
+        case 6:
+            $(".animation6").fadeIn();
+            break;
+
+        case 7:
+            $(".animation7").fadeIn();
+            break;
+
+        case 8:
+            $(".animation8").fadeIn();
+            break;
+
+        case 9:
+            $(".animation9").fadeIn();
+            break;
+
+        case 10:
+            $(".animation10").fadeIn();
+            break;
+
+        case 11:
+            $(".animation11").fadeIn();
+            break;
+        
+        default:
+            $(".animation1").fadeIn();
+            break;
+    }
 }
